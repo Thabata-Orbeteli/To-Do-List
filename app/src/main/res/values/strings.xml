@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ToDoThabata</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="floatingActionButton">Adicionar Nova Tarefa</string>
+    <string name="Nome">Nome</string>
+    <string name="Descrição">Descrição</string>
+    <string name="Responsável">Responsável</string>
+    <string name="data">Data</string>
+    <string name="Deletar">Deletar</string>
+</resources>
