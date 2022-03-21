@@ -17,53 +17,56 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_list, container, false)
 
-       val view = return inflater.inflate(R.layout.fragment_list, container, false)
-
-
-    val listTarefas = mutableListOf(
-        Tarefa(
-            "Estudar",
-            "Iniciar na parte da noite",
-            "Thábata",
-            "2022-21-03",
-            true,
-            "Dia a Dia"
-        ),
-        Tarefa(
-            "Passear com a Lunna",
-            "Duas vezes por dia",
-            "Thábata",
-            "2022-21-03",
-            false,
-            "Dia a Dia"
-        ),
-        Tarefa(
-            "Comprar chocolate",
-            "Cacau Show",
-            "Thábata",
-            "2022-21-03",
-            false,
-            "Compras"
+        val listTarefas = mutableListOf(
+            Tarefa(
+                "Estudar",
+                "Programação",
+                "Thábata",
+                "2022-21-03",
+                true,
+                "Dia a Dia"
+            ),
+            Tarefa(
+                "Passear com a Lunna",
+                "30 minutos",
+                "Thábata",
+                "2022-21-03",
+                false,
+                "Dia a Dia"
+            ),
+            Tarefa(
+                "Jogar o Lixo",
+                "Terça Feira",
+                "Thábata",
+                "2022-21-03",
+                true,
+                "Limpeza"
+            )
         )
-    )
 
-        val recyclerTarefa = view.findViewbyId<RecyclerView>(R.id.recyclerTarefa)
+        val recyclerTarefa = view.findViewById<RecyclerView>(R.id.recyclerTarefa)
 
-        val adapter = TarefaAdapter()
+        val adapterTarefa = TarefaAdapter()
 
         recyclerTarefa.layoutManager = LinearLayoutManager(context)
 
-        recyclerTarefa.adapter = adapter
+        recyclerTarefa.adapter = adapterTarefa
 
         recyclerTarefa.setHasFixedSize(true)
 
-        adapter.setLista(listTarefas)
+        adapterTarefa.setLista(listTarefas)
 
         return view
-}
+    }
+
+
 
 }
+
+
 
 
 
